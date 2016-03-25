@@ -29,7 +29,7 @@ echo '<a href="./uploadImage.php">back</a>';
  *
  */
 function upload(){
-/*** check if a file was uploaded ***/
+/*** check if a file was uploaded ***/echo $_FILES['fileToUpload']['tmp_name'];
 	if(is_uploaded_file($_FILES['fileToUpload']['tmp_name']) && getimagesize($_FILES['fileToUpload']['tmp_name']) != false)
 		{
 		$timeid=$_POST['timeid'];
